@@ -219,3 +219,26 @@ jQuery(document).ready(function($){
   });
 });
 
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const target = document.querySelector('.pts-main');
+  let isSticky = false;
+
+  window.addEventListener('scroll', function () {
+    const rect = target.getBoundingClientRect();
+
+    // When the top of the element touches the top of the viewport
+    if (rect.top <= 0 && !isSticky) {
+      target.classList.add('make-me-sticky');
+      isSticky = true;
+    }
+
+    // When scrolling up, and element comes back into view
+    if (rect.top > 0 && isSticky) {
+      target.classList.remove('make-me-sticky');
+      isSticky = false;
+    }
+  });
+});

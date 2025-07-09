@@ -57,35 +57,37 @@ $pas_bg_image = get_field('pas_bg_image');
 </section>
 
 <section class="product-tab-section globalpadding">
-    <div style="background-color:#f5f5f5;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 pts-gride">
-                    <?php if ($pd_display_condition === 'show') : ?>
-                    <div class="pts-item">
-                        <a href="#detail">Details</a>
+    <div class="pts-main">
+        <div style="background-color:#f5f5f5;" class="pts-stick">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 pts-gride">
+                        <?php if ($pd_display_condition === 'show') : ?>
+                        <div class="pts-item">
+                            <a href="#detail">Details</a>
+                        </div>
+                        <?php endif; ?>
+                        <?php if ($ppd_display_condition === 'show') : ?>
+                        <div class="pts-item">
+                            <a href="#profile">Profile & Dimensions</a>
+                        </div>
+                        <?php endif; ?>
+                        <?php if ($pt_display_condition === 'show') : ?>
+                        <div class="pts-item">
+                            <a href="#addition-info">Additional Specifications</a>
+                        </div>
+                        <?php endif; ?>
+                        <?php if ($pps_display_condition === 'show') : ?>
+                        <div class="pts-item">
+                            <a href="#timetable">Accelerate Production Timetables</a>
+                        </div>
+                        <?php endif; ?>
+                        <?php if ($pas_display_condition === 'show') : ?>
+                        <div class="pts-item">
+                            <a href="#3d-shaping">3D Profiling Shapes</a>
+                        </div>
+                        <?php endif; ?>
                     </div>
-                     <?php endif; ?>
-                    <?php if ($ppd_display_condition === 'show') : ?>
-                    <div class="pts-item">
-                        <a href="#profile">Profile & Dimensions</a>
-                    </div>
-                     <?php endif; ?>
-                    <?php if ($pt_display_condition === 'show') : ?>
-                    <div class="pts-item">
-                        <a href="#addition-info">Additional Specifications</a>
-                    </div>
-                     <?php endif; ?>
-                    <?php if ($pps_display_condition === 'show') : ?>
-                    <div class="pts-item">
-                        <a href="#timetable">Accelerate Production Timetables</a>
-                    </div>
-                     <?php endif; ?>
-                    <?php if ($pas_display_condition === 'show') : ?>
-                    <div class="pts-item">
-                        <a href="#3d-shaping">3D Profiling Shapes</a>
-                    </div>
-                     <?php endif; ?>
                 </div>
             </div>
         </div>
