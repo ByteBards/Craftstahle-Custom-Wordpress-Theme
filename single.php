@@ -32,7 +32,7 @@ while ( have_posts() ) :
 	the_post();
 
 	?>
-<section class="topbanner d-flex align-items-center justify-content-center">
+<section class="topbanner d-flex align-items-center justify-content-center singleblog">
     <?php  $featured_image = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
     <div class="container" style="position:relative;bottom: 0;">
         <div class="row tb-topnav">
@@ -49,7 +49,7 @@ while ( have_posts() ) :
 		<div class="row">
 			<div class="col-md-6">
 				<div class="tb-innercontent d-flex flex-column align-items-left justify-content-center">
-						<h1><?php echo the_title(); ?></h1>
+						<h2><?php echo the_title(); ?></h2>
 				</div>
 			</div>
 		</div>

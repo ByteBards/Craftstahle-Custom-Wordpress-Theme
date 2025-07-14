@@ -7,8 +7,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <div class="lis-img">
+                <div class="lis-img shiny">
                     <img src="<?php echo esc_url($image); ?>" alt="">
+                        <div class="show-off"></div>
                 </div>
             </div>
             <div class="col-md-6">

@@ -68,8 +68,9 @@
                             <div class="history-slide">
                                 <div class="row sh-row">
                                     <div class="col-md-5">
-                                        <div class="sh-r-img">
+                                        <div class="sh-r-img shiny">
                                             <img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($year ? $year . ' Image' : 'History Image'); ?>" />
+                        <div class="show-off"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-7">

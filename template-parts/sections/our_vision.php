@@ -18,10 +18,11 @@
             <?php endif; ?>
           </div>
         </div>
-        <div class="ovs-absimg">
+        <div class="ovs-absimg shiny">
             <?php if ($our_vision_image) : ?>
                 <img src="<?php echo esc_url($our_vision_image); ?>" alt="">
             <?php endif; ?>
+            <div class="show-off"></div>
         </div>
       </div>
     </div>

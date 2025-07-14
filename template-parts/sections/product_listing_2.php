@@ -34,12 +34,13 @@
                         </div>
                     </div>
                     
-                    <div class="pis-main-img">
+                    <div class="pis-main-img shiny">
                         <?php if ($featured_image) : ?>
                             <img src="<?php echo esc_url($featured_image); ?>" alt="<?php echo esc_attr($product_title); ?>">
                         <?php else : ?>
                             <img src="https://craftstahle.scdwsites.com/wp-content/uploads/2025/06/industryimg.png" alt="Placeholder">
                         <?php endif; ?>
+                        <div class="show-off"></div>
                     </div>
                 </div>
             </div>

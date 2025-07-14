@@ -127,7 +127,7 @@ font-family: var(--Gotham-Font);
 section{
     overflow: hidden;
 }
-h2.h2, .pps-c-content h2, h2, .pds-content h2, .tb-toprow h2, .lis-content h2, .contentmain h2{
+h2.h2, .pps-c-content h2, h2, .pds-content h2, .tb-toprow h2, .lis-content h2, .contentmain h2, .singleblog h2{
     font-size: 20px;
     line-height: 114%;
     font-weight: 700;
@@ -167,10 +167,10 @@ p{
 .gitr-contact-info ul li a:hover span.ci-icon {
     background-color: var(--primary-clr);
 }
-a.nav-link, ul#menu-quick-links .menu-item a, .custom-menu-class .menu-item a, .noc-c-content a.noc-readmore{
+a.nav-link, ul#menu-quick-links .menu-item a, .custom-menu-class .menu-item a, .noc-c-content a.noc-readmore, .cuiss-info a{
     position: relative;
 }
-a.nav-link:after, ul#menu-quick-links .menu-item a:after, .custom-menu-class .menu-item a:after, .noc-c-content a.noc-readmore:after {
+a.nav-link:after, ul#menu-quick-links .menu-item a:after, .custom-menu-class .menu-item a:after, .noc-c-content a.noc-readmore:after, .cuiss-info a:after {
     content: ' ';
     position: absolute;
     height: 1px;
@@ -180,13 +180,13 @@ a.nav-link:after, ul#menu-quick-links .menu-item a:after, .custom-menu-class .me
     left: 0;
     transition: 1s;
 }
-a.nav-link:hover:after, .current-menu-item a.nav-link:after,  ul#menu-quick-links .menu-item a:hover:after, .custom-menu-class .menu-item a:hover:after, .noc-card:hover .noc-c-content a.noc-readmore:after{
+a.nav-link:hover:after, .current-menu-item a.nav-link:after,  ul#menu-quick-links .menu-item a:hover:after, .custom-menu-class .menu-item a:hover:after, .noc-card:hover .noc-c-content a.noc-readmore:after, .cuiss-info a:hover:after{
 width: 100%;
 }
 a.nav-link:hover svg path{
     fill: var(--primary-clr);
 }
-a.nav-link:hover, .current-menu-item a.nav-link, ul#menu-quick-links .menu-item a:hover, .custom-menu-class .menu-item a:hover{
+a.nav-link:hover, .current-menu-item a.nav-link, ul#menu-quick-links .menu-item a:hover, .custom-menu-class .menu-item a:hover, .cuiss-info a:hover{
     color: var(--primary-clr)!important;
 }
 .container{
@@ -329,17 +329,20 @@ button#load-more-blogs {
   overflow:hidden;
   position: relative;
 }
-.global-btn a:before, .owl-nav button:before {
+.global-btn a:before, .owl-nav button:before, .cr-card-bottom:before {
     content: ' ';
-    width: 164px;
+    width: 120%;
     height: 200px;
     position: absolute;
     top: -118px;
-    left: -177px;
+    left: -120%;
     transition: 1s;
     transform: rotate(30deg);
     background-color: var(--white)!important;
     z-index: -1;
+}
+.cr-card-bottom:before {
+    transform: unset;
 }
 .owl-nav button:before{
     z-index: 2!important;
@@ -347,11 +350,14 @@ button#load-more-blogs {
 .owl-nav button svg{
     z-index: 3;
 }
-.global-btn a:hover:before, .owl-nav button:hover:before{
+.global-btn a:hover:before, .owl-nav button:hover:before, .tw-clm-row a:hover .cr-card-bottom:before{
     left: 27px;
 }
+.tw-clm-row a:hover .cr-card-bottom:before, .ss-cr-card a:hover .cr-card-bottom:before{
+    left: 0px;
+}
 
-.global-btn a:after, .owl-nav button:after {
+.global-btn a:after, .owl-nav button:after, .cr-card-bottom:after {
     content: ' ';
     width: 100%;
     height: 100%;
@@ -444,6 +450,8 @@ section.services-sec {
     left: 0;
     right: 0;
     margin: auto;
+    z-index: 1;
+    overflow: hidden;
 }
 .services-sec .cr-card-bottom h3.h3 {
     font-size: 16px;
@@ -532,6 +540,11 @@ section.certificate-sec {
 .noc-c-content p {
     font-size: 14px;
     line-height: 35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 .noc-c-content a.noc-readmore {
     font-size: 12px;
@@ -668,6 +681,7 @@ section.testimonials-sec {
 }
 .getintouch-section .gitsec-form {
     padding: 0;
+    position: relative;
 }
 .gitbg-inner {
     position: relative;
@@ -736,9 +750,10 @@ section.getintouch-section {
     color: #000 !important;
     text-transform: uppercase;
     text-decoration: none;
-    background-color: transparent !important;
+    background-color: var(--primary-clr) !important;
     height: auto;
     line-height: 12px;
+    font-family: var(--Gotham-Font);
 }
 .cf-frommain {
     display: flex;
@@ -1655,6 +1670,32 @@ section.threecards-section {
     height: 395px;
     width: 100%;
     object-fit: cover;
+}
+.gitsec-form .socialinfo ul a {
+    width: unset;
+    height: unset;
+    display: unset;
+    border: unset;
+    align-items: unset;
+    padding: unset;
+}
+.gitsec-form .socialinfo ul {
+    gap: 20px;
+}
+.gitsec-form .socialinfo {
+    margin-top: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.gitsec-form .socialinfo span {
+    font-size: 18px;
+    color: #2E2D2C;
+    font-weight: 600;
+}
+
+.gitsec-form .socialinfo a:hover svg path {
+    fill: var(--primary-clr);
 }
 @media screen and (min-width: 1140px){
     .tb-innercontent {

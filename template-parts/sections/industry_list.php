@@ -16,10 +16,11 @@
                             <?php echo wp_kses_post($content); ?>
                         <?php endif; ?>
                     </div>
-                    <div class="pis-main-img">
+                    <div class="pis-main-img shiny">
                         <?php if ($image) : ?>
                             <img src="<?php echo esc_url($image); ?>">
                         <?php endif; ?>
+                        <div class="show-off"></div>
                     </div>
                 </div>
             </div>
