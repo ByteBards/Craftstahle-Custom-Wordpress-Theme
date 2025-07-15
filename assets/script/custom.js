@@ -1,8 +1,16 @@
 jQuery(document).ready(function($) {
+  // Refresh carousel on window resize
+  $(window).resize(function() {
+    owl.trigger('refresh.owl.carousel');
+  });
+});
+
+
+jQuery(document).ready(function($) {
   // Initialize the Owl Carousel
   var owl = $('.news-owl-carousel').owlCarousel({
     loop: true,
-    margin: 30,
+    margin: 20,
     dots: false,
     nav: false, // Disable default nav since we use custom nav
     responsiveClass: true,
@@ -53,7 +61,7 @@ jQuery(document).ready(function($) {
         stagePadding: 50,
       },
       1000: {
-        items: 3
+        items: 2.8
       }
     }
   });

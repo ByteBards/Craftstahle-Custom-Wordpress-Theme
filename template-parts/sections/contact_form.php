@@ -1,4 +1,9 @@
- <section class="getintouch-section globalpadding" style="background-color: #ffffff;">
+<style>
+    .wpcf7-response-output {
+    position: absolute;
+}
+</style>
+<section class="getintouch-section globalpadding" style="background-color: #ffffff;">
     <?php
     $h2_text        = get_sub_field('cfs_title');
     $p_text        = get_sub_field('cfs_description');

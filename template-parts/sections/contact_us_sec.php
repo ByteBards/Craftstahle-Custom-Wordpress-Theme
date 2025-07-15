@@ -1,4 +1,4 @@
- <section class="getintouch-section">
+ <section class="getintouch-section homegin-ces">
     <?php
         $h2_text        = get_sub_field('contact_us_title');
         $p_text        = get_sub_field('contact_us_description');

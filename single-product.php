@@ -56,7 +56,7 @@ $pas_bg_image = get_field('pas_bg_image');
     </div>
 </section>
 
-<section class="product-tab-section globalpadding">
+<section class="product-tab-section globaltoppadding">
     <div class="pts-main">
         <div style="background-color:#f5f5f5;" class="pts-stick">
             <div class="container">
@@ -96,7 +96,7 @@ $pas_bg_image = get_field('pas_bg_image');
 
 
 <?php if ($pd_display_condition === 'show') : ?>
-<section class="product-detail-section globalbottompadding" id="detail">
+<section class="product-detail-section globalpadding" id="detail">
     <div class="container">
         <div class="row pds-rowtop">
             <div class="col-md-6">

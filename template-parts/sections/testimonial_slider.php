@@ -30,6 +30,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container-fluid">
         <div class="row ts-carousal-row">
             <div class="col-md-12">
                 <div class="testimonials-owl-carousel owl-carousel owl-theme">

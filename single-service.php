@@ -3,6 +3,12 @@
     .topbanner {
     padding: 171px 0;
 }
+@media (max-width: 992px){
+    .topbanner {
+    padding: 55px 0;
+}
+
+}
 </style>
 
 <?php

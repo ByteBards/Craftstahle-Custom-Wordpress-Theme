@@ -21,14 +21,14 @@ font-display: swap;
 }
 @font-face {
 font-family: "Gotham";
-src: url("/wp-content/themes/Craftstahle-theme/assets/fonts/Gotham-Black.woff") format("woff");
+src: url("/wp-content/themes/Craftstahle-theme/assets/fonts/Gotham-Bold.woff") format("woff");
 font-weight: 500;
 font-style: normal;
 font-display: swap;
 }
 @font-face {
 font-family: "Gotham";
-src: url("/wp-content/themes/Craftstahle-theme/assets/fonts/Gotham-Bold.woff") format("woff");
+src: url("/wp-content/themes/Craftstahle-theme/assets/fonts/Gotham-Black.woff") format("woff");
 font-weight: 700;
 font-style: normal;
 font-display: swap;
@@ -127,6 +127,12 @@ font-family: var(--Gotham-Font);
 section{
     overflow: hidden;
 }
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) img {
+    outline: none!important;
+}
+.wpcf7-response-output {
+    color: #000;
+}
 h2.h2, .pps-c-content h2, h2, .pds-content h2, .tb-toprow h2, .lis-content h2, .contentmain h2, .singleblog h2{
     font-size: 20px;
     line-height: 114%;
@@ -142,7 +148,7 @@ p{
     color: #575757;
     font-size: 14px;
     line-height: 34px;
-    font-weight: 300;
+    font-weight: 400;
 }
 .global-btn {
     display: inline-flex;
@@ -251,7 +257,7 @@ ul.navbar-nav li.nav-item a.nav-link {
     bottom: 82px;
 }
 .bannerimg {
-    height: 629px;
+    height: 670px;
 }
 .bannerimg img {
     width: 100%;
@@ -263,11 +269,12 @@ ul.navbar-nav li.nav-item a.nav-link {
     line-height: 114%;
     color: var(--primary-clr);
     text-transform: uppercase;
+    font-weight: 600;
 }
 .tb-innercontent h4 {
     font-size: 15px;
     line-height: 200%;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--primary-clr);
     margin-top: 8px;
     text-align: center;
@@ -323,13 +330,15 @@ button#load-more-blogs {
     text-transform: uppercase;
     text-decoration: none;
     background-color: var(--primary-clr);
+    font-weight: 400;
+    z-index: 1;
 }
 
-.shiny, .global-btn, .owl-nav button {
+.shiny, .global-btn, .owl-nav button, button#load-more-blogs {
   overflow:hidden;
   position: relative;
 }
-.global-btn a:before, .owl-nav button:before, .cr-card-bottom:before {
+.global-btn a:before, .owl-nav button:before, .cr-card-bottom:before, button#load-more-blogs:before {
     content: ' ';
     width: 120%;
     height: 200px;
@@ -350,14 +359,14 @@ button#load-more-blogs {
 .owl-nav button svg{
     z-index: 3;
 }
-.global-btn a:hover:before, .owl-nav button:hover:before, .tw-clm-row a:hover .cr-card-bottom:before{
+.global-btn a:hover:before, .owl-nav button:hover:before, .tw-clm-row a:hover .cr-card-bottom:before, button#load-more-blogs:hover:before{
     left: 27px;
 }
 .tw-clm-row a:hover .cr-card-bottom:before, .ss-cr-card a:hover .cr-card-bottom:before{
     left: 0px;
 }
 
-.global-btn a:after, .owl-nav button:after, .cr-card-bottom:after {
+.global-btn a:after, .owl-nav button:after, .cr-card-bottom:after, button#load-more-blogs:after {
     content: ' ';
     width: 100%;
     height: 100%;
@@ -425,8 +434,11 @@ section.services-sec {
     margin-bottom: 185px;
 }
 .ss-top-row {
-    padding-bottom: 58px;
+    padding-bottom: 113px;
     text-align: center;
+}
+.ss-tr-content {
+    gap: 29px;
 }
 .ss-clm-row .col-md-3 {
     padding-right: 4px;
@@ -523,7 +535,12 @@ section.certificate-sec {
     height: 362px;
 }
 .row.ns-top-row {
-    margin-bottom: 46px;
+    margin-bottom: 116px;
+}
+.ns-tr-content {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
 }
 .noc-c-img img {
     height: 246px;
@@ -695,8 +712,15 @@ section.testimonials-sec {
 .gitr-content{
     padding-bottom: 53px;
 }
+.teams-tr-content {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
 section.getintouch-section {
     background-color: #f7f7f7;
+    margin-bottom: 185px !important;
+    margin-top: 0;
 }
 .gitr-contact-info ul {
     padding: 0;
@@ -706,7 +730,7 @@ section.getintouch-section {
     flex-direction: column;
     gap: 30px;
 }
-.gitsec-form {
+.homegin-ces .gitsec-form {
     padding: 98px 55px 107px 0px;
 }
 .gitsec-form .gitr-from input, .gitsec-form .gitr-from textarea, .gitsec-form .gitr-from select {
@@ -747,6 +771,7 @@ section.getintouch-section {
     border: 1px solid var(--primary-clr);
     display: inline-flex;
     font-size: 12px;
+    font-weight: 400;
     color: #000 !important;
     text-transform: uppercase;
     text-decoration: none;
@@ -780,7 +805,7 @@ span.ci-icon {
         background-color: #2e2d2c;
     }
     .row.fs-row-top{
-        padding: 62px 0;
+        padding: 125px 0 95px;
     }
     .fsrcr-logo img {
         width: 50px;
@@ -1487,6 +1512,7 @@ section.threecards-section {
 .enquiry-section{
     padding: 122px 0 125px;
     margin-bottom: 185px!important;
+    margin-top: 0;
 }
 .lis-img {
     height: 516px;
@@ -1527,7 +1553,7 @@ section.threecards-section {
     row-gap: 30px;
 }
 .card-type-service .noc-c-img img {
-    height: 375px;
+    height: 291px;
 }
 .card-type-service .noc-c-content {
     padding: 12px 30px;
@@ -1595,7 +1621,7 @@ section.threecards-section {
 }
 .socialicon {
     position: fixed;
-    right: 40px;
+    right: 20px;
     top: 360px;
     z-index: 1000;
 }
@@ -1697,6 +1723,96 @@ section.threecards-section {
 .gitsec-form .socialinfo a:hover svg path {
     fill: var(--primary-clr);
 }
+section.testimonials-sec .container-fluid {
+    padding-top: 80px;
+}
+.cs-tr-content {
+    gap: 29px;
+}
+.tc-tr-content {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+}
+@media (max-width: 992px){
+    button.navbar-toggler.navbar_toggle {
+        background-color: var(--primary-clr)!important;
+                margin-right: 10px;
+    }
+    .a3cs-card {
+    padding: 25px 10px;
+    gap: 25px;
+}
+
+    ul.navbar-nav.navbar-right {
+        display: none;
+    }
+    nav.navbar.navbar-expand-lg {
+    padding: 0px 50px;
+}
+.site-logo {
+    height: auto;
+    padding: 19px;
+    position: relative;
+}
+.globalpadding, section.certificate-sec, section.testimonials-sec, section.threecards-section {
+    margin: 0;
+    padding: 55px 0;
+}
+section.services-sec {
+    padding: 55px 0;
+    margin-bottom: 55px;
+}
+.row.ts-cr-inner-row {
+    flex-direction: column;
+}
+.row.ts-cr-inner-row .col-md-6 {
+    width: 100%;
+}
+.tr-ir-content {
+    gap: 30px;
+}
+.row.ns-top-row, .row.teams-top-row, .row.tw-top-row {
+    margin-bottom: 55px;
+}
+section.testimonials-sec .container-fluid {
+    padding-top: 0;
+}
+.container .row.teams-scnd-row:last-of-type, .row.tw-top-row, .load-more-div, .row.tb-toprow {
+    margin-top: 55px;
+}
+.homegin-ces .gitsec-form {
+    padding: 55px 55px 55px 0px;
+}
+.ss-cr-card .ss-card-img img {
+    height: 276px;
+}
+.cs-cr-card {
+    height: 262px;
+}
+.cs-cr-card .cs-card-img {
+    width: 80%;
+}
+.toc-card .toc-c-content {
+    gap: 20px;
+}
+.teamscard {
+    padding: 25px 10px;
+}
+section.getintouch-section {
+    margin-bottom: 55px !important;
+}
+.bannerimg {
+    height: 470px;
+}
+.card-type-service .noc-c-img img {
+    height: 275px;
+}
+.enquiry-section {
+    padding: 55px 0;
+    margin-bottom: 55px !important;
+}
+}
 @media screen and (min-width: 1140px){
     .tb-innercontent {
         /* width: 38%; */
@@ -1714,6 +1830,16 @@ section.threecards-section {
         width: 700px;
         margin: auto!important;
     }
+    .site-logo img.custom-logo {
+    max-width: 99px !important;
+    max-height: 125px !important;
+    width: 99px !important;
+    height: 125px !important;
+}
+.site-logo {
+    align-items: end;
+    padding-bottom: 19px;
+}
     }
 @media (max-width: 900px) {
     .grid-container {
@@ -1766,9 +1892,6 @@ section.threecards-section {
 }
 .tb-innercontent .tb-btn {
     padding: 8px 20px;
-}
-.globalpadding {
-    padding: 100px 0;
 }
 .globalbottompadding{
     padding-bottom: 100px;
@@ -1883,10 +2006,7 @@ ul#menu-privacy-policy {
     a.navbar-brand.mx-auto.site-logo img.custom-logo {
         width: 50px;
     }
-    button.navbar-toggler.navbar_toggle {
-        background-color: var(--primary-clr)!important;
-                margin-right: 10px;
-    }
+    
     header#main-header .container-fluid {
         padding: 0 !important;
     }
@@ -1901,9 +2021,6 @@ ul#menu-privacy-policy {
     }
     div#navbarSupportedContent ul.navbar-nav {
         gap: 15px;
-    }
-    ul.navbar-nav.navbar-right {
-        display: none;
     }
     .container {
         padding: 0 20px !important;
@@ -1923,14 +2040,14 @@ ul#menu-privacy-policy {
         gap: 20px;
     }
     section.teams-sec, section.testimonials-sec, section.news-sec, section.certificate-sec, section.services-sec {
-        padding: 60px 0;
+        padding: 55px 0;
     }
     
     .gitsec-form {
         padding: 0;
     }
     .gitsec-form {
-        padding: 60px 0 40px;
+        padding: 55px 0 40px;
     }
     section.getintouch-section {
         margin-top: 0;
@@ -1940,8 +2057,24 @@ ul#menu-privacy-policy {
         .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 1144px!important;
     }
+    section.testimonials-sec .container-fluid {
+    width: calc((100% - 1245px) / 2 + 1205px);
+    margin: 0 0 0 auto;
 }
-
+.cs-cr-card {
+    margin-right: 3px;
+}
+div#blog-posts-container .col-md-4 {
+    padding-left: 8.5px;
+    padding-right: 8.5px;
+}
+}
+@media (min-width: 1601px) {
+    section.testimonials-sec .container-fluid {
+    width: calc((100% - 1164px) / 2 + 1255px);
+    margin: 0 0 0 auto;
+}
+}
 
 
 
