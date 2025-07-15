@@ -61,7 +61,17 @@ font-display: swap;
 --menu-height: 132px;
 --sidebar-width: 573px; */
 }
+/* Change background & text color for selected text */
+::selection {
+  background: var(--primary-clr); /* Red background */
+  color: var(--white); /* White text */
+}
 
+/* For Firefox (needs separate rule) */
+::-moz-selection {
+  background: var(--primary-clr);
+  color: var(--white);
+}
 * {
 -webkit-text-size-adjust: none;
 color: var(--white);
@@ -757,7 +767,7 @@ section.getintouch-section {
     font-size: 14px;
     color: #575757;
     line-height: 200%;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 7px;
 }
 .gitr-contact-info {
@@ -915,7 +925,7 @@ span.ci-icon {
     }
 
     nav.navbar.navbar-expand-lg {
-        padding: 39px 50px;
+        padding: 58px 50px 21px;
     }
     nav.navbar.navbar-expand-lg a.nav-link {
         padding: 0;
@@ -1336,7 +1346,7 @@ div#thumb-slider .thumb-item img {
 }
 .pts-item a{
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
     color: #575757;
     text-decoration: none;
     text-align: center;
@@ -1355,6 +1365,7 @@ div#thumb-slider .thumb-item img {
     width: 100%;
     z-index: 999;
     top: 0;
+    box-shadow: 0px 18px 17px -6px rgba(0, 0, 0, 0.1);
 }
 .pts-item.active, .pts-item:hover {
     background-color: var(--primary-clr);
@@ -1377,7 +1388,7 @@ div#thumb-slider .thumb-item img {
 }
 .pds-content ul li, .tdsm-c-content ul li, .postcontent .contentmain ul li  {
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     position: relative;
     color: #575757;
     padding-left: 36px;
@@ -1477,7 +1488,7 @@ section.product-last-section .container {
 }
 .tb-breadcrump a, .tb-breadcrump span {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: capitalize;
     text-decoration: none;
     outline: none;
@@ -1613,7 +1624,10 @@ section.threecards-section {
     align-items: center;
     justify-content: center;
 }
-
+.site .wtsappicon a:focus:not(.wp-block-button__link):not(.wp-block-file__button) {
+    background-color: #25d366 !important;
+    background: #25d366 !important;
+}
 .wtsappicon a img {
     width: 32px;
     height: 32px;
@@ -1734,6 +1748,10 @@ section.testimonials-sec .container-fluid {
     flex-direction: column;
     gap: 29px;
 }
+.wpcf7-response-output {
+    display: inline-flex;
+    margin-left: 0 !important;
+}
 @media (max-width: 992px){
     button.navbar-toggler.navbar_toggle {
         background-color: var(--primary-clr)!important;
@@ -1844,14 +1862,15 @@ section.getintouch-section {
 @media (max-width: 900px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: auto;
+        /* grid-template-rows: repeat(4, 1fr); */
     }
 }
 
 @media (max-width: 500px) {
     .grid-container {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(8, 1fr);
+        grid-template-rows: auto;
     }
     
     .grid-item {
@@ -1864,6 +1883,9 @@ section.getintouch-section {
         object-fit: cover;
         object-position: left;
     }
+    .gitsec-form .socialinfo {
+    position: relative;
+}
     .row.tb-toprow {
     margin-top: 80px;
 }
@@ -2067,6 +2089,85 @@ ul#menu-privacy-policy {
 div#blog-posts-container .col-md-4 {
     padding-left: 8.5px;
     padding-right: 8.5px;
+}
+}
+@media (min-width: 990px) and (max-width: 1100px){
+nav.navbar.navbar-expand-lg a.nav-link {
+    font-size: 12px;
+}
+ul.navbar-nav li.nav-item {
+    margin-right: 15px;
+}
+nav.navbar.navbar-expand-lg {
+    padding: 39px 20px;
+}
+.site-logo {
+    width: 130px;
+    height: 150px;
+}
+.bannerimg {
+    height: 470px;
+}
+.globalpadding {
+    margin: 0;
+    padding: 80px 0;
+}
+.row.tw-top-row {
+    margin-bottom: 0;
+}
+.tw-card-img {
+    height: 295px;
+}
+section.services-sec {
+    padding: 60px 0 60px;
+    margin-bottom: 8px;
+}
+.ss-cr-card .ss-card-img img {
+    height: 276px;
+}
+.aboutus-sec .container .row .aus-colmn {
+    padding: 60px 40px;
+}
+.aus-img img {
+    height: 432px;
+}
+.ts-ir-img img {
+    height: 235px;
+}
+.tr-ir-content {
+    padding: 20px 0px 0px 15px;
+    gap: 15px;
+}
+section.certificate-sec, section.testimonials-sec, section.ourclient-sec, section.profile-dimension-section, section.threedshaping-section {
+    padding: 80px 0;
+}
+.row.ns-top-row, .row.pts-toprow {
+    margin-bottom: 30px;
+}
+section.testimonials-sec .container-fluid {
+    padding-top: 0;
+}
+section.getintouch-section {
+    margin-bottom: 80px !important;
+    margin-top: 0;
+}
+.pis-main {
+    gap: 85px;
+}
+.pis-main .row:nth-child(odd) .pis-main-content {
+    padding: 50px 94px 50px 331px;
+}
+.pis-main .row:nth-child(even) .pis-main-content {
+    padding: 50px 303px 50px 98px;
+}
+.show-off {
+    left: -727px;
+}
+section.product-last-section .container {
+    padding: 50px 30px 50px !important;
+}
+.pls-main.row .col-md-6 {
+    padding: 50px 30px 50px;
 }
 }
 @media (min-width: 1601px) {

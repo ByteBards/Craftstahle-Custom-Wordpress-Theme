@@ -1,7 +1,11 @@
 jQuery(document).ready(function($) {
   // Refresh carousel on window resize
-  $(window).resize(function() {
-    owl.trigger('refresh.owl.carousel');
+ var resizeTimer;
+  $(window).on('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      owl.trigger('refresh.owl.carousel');
+    }, 250); // Adjust delay as needed
   });
 });
 
